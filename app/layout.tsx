@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="mx-[115px]">
+    <html lang="en" className="mx-[20px] md:mx-[50px] lg:mx-[115px]">
       <ClientOnly>
         <Header />
       </ClientOnly>

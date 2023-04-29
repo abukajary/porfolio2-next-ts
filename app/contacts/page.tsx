@@ -22,7 +22,7 @@ export default function Home() {
   };
   return (
     <main className="w-70vw">
-      <div className="grid grid-cols-2 grid-rows-1 gap-x-[20px]">
+      <div className="grid lg:grid-cols-2 grid-rows-1 gap-x-[20px]">
         <div>
           <h1>Связь со мной</h1>
 
@@ -37,7 +37,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="px-[15px] py-[20px] bg-white">
+        <div className="lg:px-[15px] py-[40px] bg-white">
           <form onSubmit={handleSubmit}>
             <div>
               <div className="grid gap-x-[20px]">
