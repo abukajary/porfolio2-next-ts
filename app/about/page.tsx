@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="grid grid-flow-col  gap-x-[124px] pb-6 lg:pb-[134px] border-b-[2px] border-black">
@@ -15,7 +17,7 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-2 font-normal text-base leading-[121.5%] tracking-tighter">
           <span className="underline">Main Skills</span>
-          <p>HTML, CSS, JS, React.js, Next.js, TypeScript</p>
+          <p>HTML, CSS, SCSS, JS, React.js, Next.js, TypeScript</p>
         </div>
 
         <div className="grid grid-cols-2 font-normal text-base leading-[121.5%] tracking-tighter">
@@ -31,11 +33,7 @@ export default function Home() {
         </div>
       </div>
       <div className="hidden lg:block">
-        <img
-          className="w-full"
-          src="https://cdni.iconscout.com/illustration/premium/thumb/developer-working-on-laptop-4550302-3779206.png"
-          alt=""
-        />
+        <Image width={1500} height={1000} alt="dev" src="/img/developer-working-on-laptop.webp"></Image>
       </div>
       {/* <Footer /> */}
     </main>

@@ -74,7 +74,7 @@ export default function Home() {
               </div>
             </div>
             <button
-              className="focus:outline-none border-0 px-4 py-2 w-[100px] h-12 bg-purple-600 text-white rounded-md mt-3 cursor-pointer"
+              className="focus:outline-none border-0 px-4 py-2 w-[120px] h-12 bg-purple-600 text-white rounded-md mt-3 cursor-pointer"
               type="submit"
             >
               Отправить

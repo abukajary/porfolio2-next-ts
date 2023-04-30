@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import IFrame from './IFrame'
 
 interface CardContent {
   title: string
@@ -26,11 +27,12 @@ export const DefaultCard: React.FC<CardContent> = ({
         <div className='font-normal text-base leading-[121.5%] tracking-tighter w-full lg:max-w-[70%] mt-25'>{text}</div>
         {subText && <div className='font-normal text-sm leading-[121.5%] tracking-tighter text-gray-600 w-full lg:max-w-[70%] py-[33px]'> {subText} </div>}
         <div className='mt-auto font-medium text-base tracking-tighter underline'>
-          {linkText && linkUrl && <Link href={linkUrl}>{linkText}</Link>}
+          {linkText && linkUrl && <a href={linkUrl} target='_blank'>{linkText}</a>}
         </div>
       </div>
-      <div className='w-full max-w-[640px] flex lg:justify-end pt-6 lg:pt-0'>
-        <img src={image} alt="image1" />
+      <div className='w-full max-w-[740px] flex lg:justify-end pt-6 lg:pt-0 h-96'>
+        {/* <img src={image} alt="image1" /> */}
+      <IFrame src={image} title={title}/>
       </div>
     </div>
   )
