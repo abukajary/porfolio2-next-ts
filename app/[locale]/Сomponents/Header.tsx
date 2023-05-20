@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,9 +14,22 @@ const Header = () => {
 
   const t = useTranslations("Index");
 
+  const router = useRouter();
+
+  const changeLanguage = (language: string) => {
+    router.push(language);
+  };
+
   return (
     <div className="flex justify-between lg:my-[115px] my-4">
-      <div className="font-medium text-3xl underline">abukajary.dev</div>
+      <div className="flex justify-center items-center gap-4">
+        <div className="font-medium text-3xl underline">abukajary.dev</div>
+        <div>
+          <button onClick={() => changeLanguage("en")}>en</button>
+          /
+          <button onClick={() => changeLanguage("ru")}>ru</button>
+        </div>
+      </div>
       <div className="lg:grid grid-flow-col gap-x-[32px] font-medium text-xl hidden">
         <Link href="/">{t("myWorks")}</Link>
         <Link href="/about">{t("aboutMe")}</Link>
