@@ -2,6 +2,7 @@
 import { useCallback, useState } from "react";
 import Link from "next/link";
 import { AiOutlineMenu } from "react-icons/ai";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,14 +11,16 @@ const Header = () => {
     setIsOpen((value) => !value);
   }, []);
 
+  const t = useTranslations("Index");
+
   return (
     <div className="flex justify-between lg:my-[115px] my-4">
-      <div className="font-medium text-3xl underline">abukajary.</div>
+      <div className="font-medium text-3xl underline">abukajary.dev</div>
       <div className="lg:grid grid-flow-col gap-x-[32px] font-medium text-xl hidden">
-        <Link href="/">Мои работы</Link>
-        <Link href="/about">Обо мне</Link>
-        <Link href="/codeSnippet">Сниппеты кода</Link>
-        <Link href="/contacts">Контакты</Link>
+        <Link href="/">{t("myWorks")}</Link>
+        <Link href="/about">{t("aboutMe")}</Link>
+        <Link href="/codeSnippet">{t("codeSnippet")}</Link>
+        <Link href="/contacts">{t("contacts")}</Link>
       </div>
       <div
         className="flex justify-center items-center lg:hidden relative cursor-pointer"
@@ -43,16 +46,16 @@ const Header = () => {
           >
             <div className="flex flex-col">
               <Link className="p-2 cursor-pointer" href="/">
-                Мои работы
+                {t("myWorks")}
               </Link>
               <Link className="p-2 cursor-pointer" href="/about">
-                Обо мне
+                {t("aboutMe")}
               </Link>
               <Link className="p-2 cursor-pointer" href="/codeSnippet">
-                Сниппеты кода
+                {t("codeSnippet")}
               </Link>
               <Link className="p-2 cursor-pointer" href="/contacts">
-                Контакты
+                {t("contacts")}
               </Link>
             </div>
           </div>

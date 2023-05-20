@@ -1,0 +1,17 @@
+{
+  "Index": {
+    "hello": "Hello!",
+    "aboutMe": "About me",
+    "myWorks": "My Works",
+    "codeSnippet": "Code snippets",
+    "contacts": "Contacts",
+    "iamfrontender": "I am junior React Frontend Developer",
+    "codeSnippetsH1": "My code snippets and it`s output",
+    "aboutMeP": "My name is Abubakir Zharylgapov, I have been creating websites for 2 years and have 6 months of professional experience.",
+    "aboutMeP1": "In addition to Frontend development, there are basic backend and DBMS skills in python and MYSQL.",
+    "softSkills": "Teamwork, Communication Skills, Adaptation Skills, Interpersonal",
+    "ansYrProject": "I am very happy to answer to your next project",
+    "GetInTouch": "Get In Touch",
+    "Submit": "Submit"
+  }
+}
